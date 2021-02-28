@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<p><a href="/">home</a></p>
+
+<p>入力した単語と類似度の高い単語を10個表示します。</p>
+<form action="/mode1" method="post">
+    <input type="text" name="word" placeholder="word">
+    <input type="submit" value="submit">
+</form>
+
+
+<p>word : {{ word }}</p>
+<table>
+    <tr>
+        <th>word</th>
+        <th>similarity</th>
+    </tr>
+    {%- for i in range(10) %}
+    <tr>
+        <td>{{ sim_word[i][0] }}</td>
+        <td>{{ sim_word[i][1] }}</td>
+    </tr>
+    </p>
+    {%- endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<p><a href="/">home</a></p>
+
+<p>単語の計算を行います。複数入力する場合はカンマ区切り。</p>
+<form action="/mode3" method="post">
+    正　<input type="text" name="pos" placeholder="positive"><br>
+    負　<input type="text" name="neg" placeholder="negative"><br>
+    <input type="submit" value="submit">
+</form>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+<p><a href="/">home</a></p>
+
+<p>計算</p>
+<form action="/mode3" method="post">
+    <input type="text" name="pos" placeholder="positive"><br>
+    <input type="text" name="neg" placeholder="negative"><br>
+    <input type="submit" value="submit">
+</form>
+
+<p>正　：　{{ pos }}</p>
+<p>負　：　{{ neg }}</p>
+<p>答　：</p>
+<table>
+    <tr>
+        <th>word</th>
+        <th>similarity</th>
+    </tr>
+    {%- for i in range(10) %}
+    <tr>
+        <td>{{ ans[i][0] }}</td>
+        <td>{{ ans[i][1] }}</td>
+    </tr>
+    </p>
+    {%- endfor %}
+</table>
+
+{% endblock %}
