@@ -13,6 +13,11 @@ model_path = "/Users/tatsu/Desktop/geek/product/model/word2vec.gensim.model"
 model = Word2Vec.load(model_path)
 
 
+@app.route("/favicon.ico")
+def favicon():
+    return app.send_static_file("favicon.ico")
+
+
 @app.route('/')
 def home():
     return render_template('index.html')
