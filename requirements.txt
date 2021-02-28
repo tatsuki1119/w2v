@@ -25,8 +25,6 @@ itsdangerous==1.1.0
 Jinja2==2.11.3
 jmespath==0.10.0
 MarkupSafe==1.1.1
-mkl-random==1.1.1
-mkl-service==2.3.0
 multidict==5.1.0
 numpy==1.19.2
 pip==21.0.1
