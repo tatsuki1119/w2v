@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-
+import os
 from gensim.models.word2vec import Word2Vec
 from gensim.models import KeyedVectors
 from pprint import pprint
@@ -15,7 +15,7 @@ model = Word2Vec.load(model_path)
 
 @app.route("/favicon.ico")
 def favicon():
-    return app.send_static_file("favicon.ico")
+    return app.send_static_file("/static/favicon.ico")
 
 
 @app.route('/')
@@ -73,4 +73,4 @@ def m3_post():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
