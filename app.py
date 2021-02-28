@@ -7,7 +7,8 @@ from pprint import pprint
 app = Flask(__name__)
 
 # model_path = "./model/entity_vector.model.bin"
-model_path = "/Users/tatsu/Desktop/geek/product/model/word2vec.gensim.model"
+# model_path = "/Users/tatsu/Desktop/geek/product/model/word2vec.gensim.model"
+model_path = "./model/word2vec.gensim.model"
 
 # model = KeyedVectors.load_word2vec_format(model_path, binary=False)
 model = Word2Vec.load(model_path)
